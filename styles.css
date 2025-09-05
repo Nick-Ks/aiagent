@@ -1,0 +1,23 @@
+/* styles.css */
+
+.gemini-controls {
+    text-align: right;
+    margin-top: -10px; /* Adjust as needed */
+    margin-right: 5px; /* Adjust as needed */
+    position: relative;
+    z-index: 1;
+}
+
+.gemini-controls button {
+    background-color: #4a88e8; /* A pleasant blue */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.gemini-controls button:hover {
+    background-color: #3a78d8; /* A slightly darker blue for hover */
+}

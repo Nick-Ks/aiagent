@@ -1,0 +1,10 @@
+{
+    "id": "contextual-command-agent",
+    "name": "Contextual Command Agent",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "An inline contextual assistant that uses Gemini to perform instructions based on a given context.",
+    "author": "Your Name",
+    "authorUrl": "",
+    "isDesktopOnly": false
+}
