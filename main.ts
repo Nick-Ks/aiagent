@@ -57,17 +57,14 @@ export default class GeminiAgentPlugin extends Plugin {
 				cls: "mod-cta"
 			});
 
+			const outputBlock = el.createDiv({ cls: "gemini-output", text: "" });
+			outputBlock.hide();
+
 			runButton.addEventListener("click", () => {
-				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-				if (view) {
-					this.processInstructions(source, (result) => {
-						const section = ctx.getSectionInfo(el);
-						if (section) {
-							const endLine = section.lineEnd;
-							view.editor.replaceRange(result, { line: endLine + 1, ch: 0 }, { line: endLine + 1, ch: 0 });
-						}
-					});
-				}
+				this.processInstructions(source, (result) => {
+					outputBlock.innerText = result;
+					outputBlock.show();
+				});
 			});
 		});
 	}
